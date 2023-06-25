@@ -1,0 +1,22 @@
+<div>
+<form [formGroup]="playerForm" (ngSubmit)="submitForm()">
+    Nombre:<input formControlName="name" placeholder="Nombre jugador">
+    <p *ngIf="(submitted && playerForm?.get('name')?.hasError('required'))">Este campo es requerido</p>
+    <p *ngIf="(submitted && playerForm?.get('name')?.hasError('minlength'))">Este campo tiene que tener más de 4 caracteres</p>
+    Imagen:<input formControlName="image" placeholder="Ruta de imagen">
+    Posicion:<input formControlName="position" placeholder="Posicion jugador">
+    <p *ngIf="(submitted && playerForm?.get('position')?.hasError('required'))">Este campo es requerido</p>
+    MVP:<input formControlName="MVPs" placeholder="MVP obtenidos">
+    <p *ngIf="(submitted && playerForm?.get('MVPs')?.hasError('maxlength'))">Este campo tiene que tener maximo 2 caracter</p>
+    Campeonatos:<input formControlName="championships" placeholder="Campeonatos ganados">
+    <p *ngIf="(submitted && playerForm?.get('championships')?.hasError('maxlength'))">Este campo tiene que tener maximo 2 caracter</p>
+    Equipo:<input formControlName="team" placeholder="Equipo principal">
+    <p *ngIf="(submitted && playerForm?.get('team')?.hasError('minlength'))">Este campo tiene que tener minimo 4 caracter</p>
+    <p *ngIf="(submitted && playerForm?.get('team')?.hasError('required'))">Este campo es requerido</p>
+   <span>
+        <input type="submit" value="Aceptar">
+    </span>
+    
+</form>
+<app-preview [player]="newPlayer"></app-preview>
+</div>

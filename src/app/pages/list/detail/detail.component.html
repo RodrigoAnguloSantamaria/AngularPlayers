@@ -1,0 +1,14 @@
+<article *ngIf="!showRow">
+    <h2>{{player.name}}</h2>
+    <p> {{player.characteristics.position}}</p>
+    <img src="{{player.image}}" alt="{{player.name}}">
+    
+</article>
+<article *ngIf="showRow" class="row">
+    <section>
+    <h2>{{player.name}}</h2>
+    <p> {{player.characteristics.position}}</p>
+    </section>
+    <img src="{{player.image}}" alt="{{player.name}}" [ngStyle]="{width: '50px', height: '70px'}">
+    
+</article>

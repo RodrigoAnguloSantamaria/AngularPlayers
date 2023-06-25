@@ -1,0 +1,16 @@
+<div *ngIf="player">
+    <figure>
+        <img src="{{player.image}}" alt="{{player.name}}">
+    </figure>
+    <article>
+        <p><span>Nombre:</span> {{player.name}}</p>
+    
+        <p><span>Posicion:</span> {{player.characteristics.position}}</p>
+        <p><span>MVP:</span> {{player.characteristics.MVPs}}</p>
+        <p><span>Campeonatos:</span> {{player.characteristics.championships}}</p>
+        <p><span>Equipo: </span>{{player.characteristics.team}}</p>
+    </article>
+    
+
+
+</div>

@@ -1,0 +1,17 @@
+<div *ngIf="myplayer">
+    <figure>
+        <h2>{{myplayer.name}}</h2>
+        <p>{{myplayer.characteristics.position}}</p>
+        <img src="{{myplayer.image}}" alt="{{myplayer.name}}">
+        <p>
+            Equipo: {{myplayer.characteristics.team}}
+        </p>
+        <p>Campeonatos: {{myplayer.characteristics.championships}}</p>
+        <p>MVP: {{myplayer.characteristics.MVPs}}</p>
+        <section>
+        <button (click)="deletePlayer()">Eliminar</button>
+        <button (click)="modifyPlayer(myplayer)" >Editar</button>
+        </section>
+        <button routerLink="/list">Ir atras</button>
+    </figure>
+</div>

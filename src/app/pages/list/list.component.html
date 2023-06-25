@@ -1,0 +1,32 @@
+<div>
+<section>
+    <span>
+    Buscar por nombre:
+    <input type="text" #name (input)="filtrar($event)" placeholder="buscador">
+    </span>
+    <select #position (change)="posicion($event)">
+        <option selected value="">Filtra por posicion</option>
+        <option value="Point Guard">Point Guard</option>
+        <option value="Shooting Guard">Shooting Guard</option>
+        <option value="Small Forward">Small Forward</option>
+        <option value="Power Forward">Power Forward</option>
+        <option value="Center">Center</option>
+        
+    </select>
+    <button (click)="limpiar()">Limpiar filtros </button>
+    <aside>
+        <img src="../../../assets/ico_row.png" (click)="setRow()" [ngClass]="{clicked: showRow}">
+        <img src="../../../assets/ico_grid.png" (click)="unsetRow()" [ngClass]="{clicked: !showRow}">
+
+    </aside>
+</section>
+<ul [ngClass]="{list: showRow}">
+    <li *ngFor="let player of playersFiltered" routerLink="/list/{{player.id}}">
+        
+        <app-detail [player]="player" [showRow]="showRow"></app-detail>
+    
+        <p class="pop">Click para ver detalle</p>
+    </li>
+
+</ul>
+</div>

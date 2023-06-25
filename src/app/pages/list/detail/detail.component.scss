@@ -1,0 +1,39 @@
+article{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    h2{
+        font-size: large;
+        background-color: transparent;
+    }
+    p{
+        background-color: transparent;
+    }
+    img{
+        max-width: 90%;
+        height: 200px;
+        opacity: 0.8;
+       
+    }
+    img:hover{
+        
+        opacity: 1;
+    }
+
+}
+.row{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    section{
+        min-width: 50%;
+    }
+    h2,p{
+        background-color: white;
+    }
+}
